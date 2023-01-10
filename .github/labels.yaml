@@ -1,0 +1,53 @@
+- name: 'bug :bug:'
+  color: '#B60205'
+  description: "Something isn't working"
+  aliases: []
+
+- name: 'documentation :memo:'
+  color: '#0075ca'
+  description: 'Improvements or additions to documentation'
+  aliases: []
+
+- name: 'epic'
+  color: '#5319E7'
+  description: ''
+  aliases: []
+
+- name: 'feature :new:'
+  color: '#9AC6A7'
+  description: 'Should not be labeled as stale'
+  aliases: []
+
+- name: 'question :question:'
+  color: '#d876e3'
+  description: 'Further information is requested'
+  aliases: []
+
+- name: 'task :scroll:'
+  color: '#C5A4CC'
+  description: ''
+  aliases: []
+
+- name: github_actions
+  color: '#000000'
+  description: 'Pull requests that update GitHub Actions code'
+
+- name: 'type: chore'
+  color: '#C5DEF5'
+  description: 'Code changes that neither fix bugs nor add features (refactoring, dependency changes, ...)'
+
+- name: 'status: wontfix'
+  color: '#cfd3d7'
+  description: 'This will not be worked on'
+
+- name: 'status: stale'
+  color: '#fbca04'
+  description: 'Inactive issues and PRs'
+
+- name: 'type: pinned'
+  color: '#0052cc'
+  description: 'Should not be labeled as stale'
+
+- name: 'type: pending'
+  color: '#c5def5'
+  description: 'More info is needed before deciding what to do'

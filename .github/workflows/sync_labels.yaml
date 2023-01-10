@@ -1,0 +1,43 @@
+name: Sync labels
+on:
+  # You can run this with every type of event, but it's better to run it only when you actually need it.
+  workflow_dispatch:
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: 🚀 Run Label Sync
+        uses: srealmoreno/label-sync-action@v1
+        with:
+          token: ${{ secrets.GIT_ACTION_TOKEN }}
+          config-file: .github/labels.yaml
+          #auto-discover-repos: true
+          # Optional:
+          #account-type: org
+          clean-labels: true
+          repository: |
+            inoa-io/camel-integrations
+            inoa-io/inoa-io
+          # Optional:
+          # You can specify a array of the repositories to be excluded
+          exclude-repos: |
+            repository-1
+            repository-2
+          # You can specify regex to exclude repositories
+
+
+
+          # Optional:
+          exclude-forked-repos: true
+
+          # Optional:
+          exclude-archived-repos: true
+
+          # Optional:
+          exclude-private-repos: false
+
+          # Optional:
+          exclude-disabled-repos: true
